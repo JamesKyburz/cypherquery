@@ -19,7 +19,7 @@ function createQuery (url) {
     }
 
     var payload = JSON.stringify({ statements: [{ statement: statement, parameters: parameters }] })
-    log('query', payload)
+    log('query %j', payload)
 
     var post = r.post(url, opt)
     var parse = jsonstream.parse()
@@ -33,9 +33,9 @@ function createQuery (url) {
 
 function response (data, enc, cb) {
   if (data.errors.length) {
-    error(data)
+    error('error %j', data)
   } else {
-    log(data)
+    log('response %j', data)
   }
   cb(null, data)
 }

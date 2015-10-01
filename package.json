@@ -21,6 +21,8 @@
     "hyperquest": "^1.2.0",
     "through2": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^5.3.1"
+  },
   "license": "MIT"
 }
