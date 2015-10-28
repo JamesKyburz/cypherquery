@@ -17,7 +17,7 @@ function createQuery (url) {
     var opt = {}
     var s = through.obj()
 
-    if(typeof statement === 'object') {
+    if (typeof statement === 'object') {
       opt = statement
       parameters = opt.parameters || opt.params
       schema = (opt.validation) ? opt.validation.schema : undefined
@@ -29,18 +29,18 @@ function createQuery (url) {
       try {
         statement = lodashTemplate(statement)(parameters)
       } catch (e) {
-        s.emit('error', new Error("Template parse failed: " + e.message))
+        s.emit('error', new Error('Template parse failed: ' + e.message))
       }
     }
 
-    if(schema && payload) {
+    if (schema && payload) {
       Joi.validate(payload, schema, function (err, value) {
         if (err) {
-          s.emit('error', "Validation error: " + err.message)
+          s.emit('error', 'Validation error: ' + err.message)
         } else {
           execute(url, statement, parameters).pipe(s)
         }
-      });
+      })
     } else {
       execute(url, statement, parameters).pipe(s)
     }
