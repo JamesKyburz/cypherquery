@@ -49,7 +49,9 @@ function createQuery (url) {
     }
 
     function stream () {
-      execute(url, statement, parameters, resultType).pipe(s)
+      var query = execute(url, statement, parameters, resultType)
+      query.on('error', s.emit.bind(s, 'error'))
+      query.pipe(s)
     }
     return s
   }
@@ -75,7 +77,9 @@ function createQuery (url) {
 
     var post = r.post(url, opt)
     var parse = jsonstream.parse()
-    parse.pipe(through.obj(response))
+    var handleReponse = through.obj(response)
+    handleReponse.on('error', parse.emit.bind(parse, 'error'))
+    parse.pipe(handleReponse)
     post.pipe(parse)
     post.write(payload)
     post.end()
@@ -85,9 +89,10 @@ function createQuery (url) {
   function response (data, enc, cb) {
     if (data.errors.length) {
       error('error %j', data)
+      cb(new Error(JSON.stringify(data.errors)))
     } else {
       log('response %j', data)
+      cb(null, data)
     }
-    cb(null, data)
   }
 }
