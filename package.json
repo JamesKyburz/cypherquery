@@ -20,7 +20,7 @@
     "debug": "2.2.0",
     "hyperquest": "1.2.0",
     "joi": "7.2.3",
-    "lodash.template": "4.0.1",
+    "lodash.template": "4.0.2",
     "through2": "2.0.0"
   },
   "devDependencies": {
