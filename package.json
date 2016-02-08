@@ -21,7 +21,7 @@
     "hyperquest": "1.2.0",
     "joi": "7.2.3",
     "lodash.template": "4.1.0",
-    "through2": "2.0.0"
+    "through2": "2.0.1"
   },
   "devDependencies": {
     "standard": "6.0.4"
