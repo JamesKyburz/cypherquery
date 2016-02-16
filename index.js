@@ -21,8 +21,8 @@ function createQuery (url) {
       opt = statement
       parameters = opt.parameters || opt.params
       resultType = opt.resultType
-      schema = (opt.validation) ? opt.validation.schema : undefined
-      payload = opt.payload
+      schema = opt.validation ? opt.validation.schema : undefined
+      payload = opt.validation ? opt.validation.payload : opt.payload
       statement = opt.query || opt.template
     }
 
