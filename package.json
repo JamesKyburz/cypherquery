@@ -14,7 +14,7 @@
     "prepublish": "standard"
   },
   "main": "index.js",
-  "version": "1.1.26",
+  "version": "1.1.27",
   "dependencies": {
     "JSONStream": "1.1.1",
     "debug": "2.2.0",
