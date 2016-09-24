@@ -16,7 +16,7 @@
   "main": "index.js",
   "version": "1.1.45",
   "dependencies": {
-    "JSONStream": "1.1.4",
+    "JSONStream": "1.2.1",
     "debug": "2.2.0",
     "hyperquest": "2.0.0",
     "joi": "9.0.4",
