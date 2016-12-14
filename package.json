@@ -19,7 +19,7 @@
     "JSONStream": "1.2.1",
     "debug": "2.4.1",
     "hyperquest": "2.1.2",
-    "joi": "10.0.5",
+    "joi": "10.0.6",
     "lodash.template": "4.4.0",
     "through2": "2.0.3"
   },
