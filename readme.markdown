@@ -1,5 +1,7 @@
 # cypherquery
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/cypherquery.svg)](https://greenkeeper.io/)
+
 streaming rest api for neo4j
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
