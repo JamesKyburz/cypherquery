@@ -1,3 +1,5 @@
+# This repository is no longer maintained.
+
 # cypherquery
 
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard)
